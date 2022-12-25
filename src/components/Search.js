@@ -1,10 +1,17 @@
 import React from "react";
+import {useState} from 'react'
 
-function Search() {
+function Search({searchPokeys,setSearchPokeys}) {
+
+  
+
   return (
     <div className="ui search">
       <div className="ui icon input">
-        <input className="prompt" />
+        <input 
+        onChange = {(e) => setSearchPokeys(e.target.value)}
+        className="prompt" 
+        value = {searchPokeys}/>
         <i className="search icon" />
       </div>
     </div>
